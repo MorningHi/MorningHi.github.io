@@ -1,8 +1,10 @@
 ﻿---
 title: 快速排序算法——python实现
 mathjax: true
-date: 2018-05-10 17:11:36
-tags: python
+date: 2018-11-10 17:11:36
+categories: 算法
+tags: 排序
+img: '/img/blog/sort.jpg'
 ---
 
 **快速排序的思想**
@@ -12,7 +14,7 @@ tags: python
 一趟排序的流程为：
 1. 初始时i=0, j=N-1。其中N为数组长度；
 2. 选择标志数据key，通常设置key = Array[0]；
-3. 从数组尾部向前遍历（j --），找到第一个比key小的数A[j]，交换A[i]和A[j]的位置；
+3. 从数组尾部向前遍历（j - -），找到第一个比key小的数A[j]，交换A[i]和A[j]的位置；
 4. 从数组首部向后遍历（i ++），找到第一个比key大的数A[i]，交换A[i]和A[j]的位置；
 5. 重复步骤3和4直到i=j。
 

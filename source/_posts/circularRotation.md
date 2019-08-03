@@ -1,7 +1,10 @@
 ﻿---
 title: 回环变位(Circular Rotation)
-date: 2017-08-13 13:21:24
-tags: java
+date: 2018-08-13 13:21:24
+categories: Java
+tags: 字符串
+comments: false
+img: '/img/blog/java.jpg'
 ---
 
 
