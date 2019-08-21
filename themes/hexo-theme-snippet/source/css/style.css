@@ -519,18 +519,19 @@ pre {
 .post-content {
   font: 400 16px/1.62 "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
   color: #333;
+  font-style: bold;
 }
 .post-content h1 {
   font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
   color: #333;
   font-size: 1.8em;
-  margin: 0.67em 0;
+  margin: 0.6em 0 0.5em 0;
 }
 .post-content h2 {
   font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
   color: #333;
   font-size: 1.5em;
-  margin: 0.83em 0;
+  margin: 0.88em 0 0.6em 0;
 }
 .post-content h3 {
   font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
@@ -593,6 +594,7 @@ pre {
 }
 .post-content figure {
   position: relative;
+  max-height: 800px;
   clear: both;
   outline: 0;
   margin: 10px 0;
@@ -726,7 +728,7 @@ pre {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  table-layout: fixed;
+  table-layout: auto;
   word-wrap: break-word;
 }
 .post-content th {
@@ -1071,7 +1073,7 @@ pre {
   padding-top: 1em;
   background-color: #fff;
   top: 0;
-  bottom: 70px;
+  bottom: auto;
   overflow-y: auto;
 }
 #article-toc ol {
@@ -1341,9 +1343,9 @@ pre,
   overflow: auto;
   margin: 20px 0;
   padding: 0;
-  color: #c5c8c6;
-  font-size: 13px;
-  background: #1d1f21;
+  color: #ebebeb;
+  font-size: 14px;
+  background: #999;
   line-height: 1.6;
 }
 code {
@@ -1381,7 +1383,7 @@ pre .comment {
 }
 .highlight table {
   margin: 0;
-  width: auto;
+  width: -webkit-fill-available;
   border: none;
 }
 .highlight td {
@@ -1488,7 +1490,7 @@ pre .javascript .function {
 ====================================================*/
 ::-webkit-scrollbar {
   -webkit-appearance: none;
-  height: 5px;
+  height: 8px;
   width: 5px;
 }
 ::-webkit-scrollbar-track {

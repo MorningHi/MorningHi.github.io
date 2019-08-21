@@ -10,7 +10,7 @@
                     <%- body %>
                 </main>
                 <% if(theme.toc && is_post()){ %>
-                    <%- partial('_partial/toc', null, {cache:false}) %>
+                    <%- partial('_partial/toc', null, {cache:false})%>
                 <% } else { %>
                     <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
                 <% } %>
