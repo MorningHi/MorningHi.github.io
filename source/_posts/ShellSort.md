@@ -8,7 +8,7 @@ tags:
 comments: false
 mathjax: true
 date: 2019-08-22 19:06:43
-img: 'img/blog/shell.jpg’
+img: 'img/blog/shell.jpg'
 ---
 
 ## 基本思想
