@@ -125,8 +125,8 @@ homePanel: true
 
 ## 缩略图自定义随机图片
 defaultImgs:
-  - http://www.example.jpg //远程图片链接示例
-  - /img/default-1.jpg
+  - 
+ # - /img/default-1.jpg
 
 ## 截取文章首页描述字数
 excerptLength: 100

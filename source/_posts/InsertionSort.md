@@ -28,7 +28,6 @@ img: 'img/blog/insert.jpg'
 ## 演示
 
 <center><img src="https://github.com/MorningHi/ImgRepository/raw/master/Hexoblog/sort/InsertionSort.gif"></center>
-
 ## 实现代码
 
 ```java

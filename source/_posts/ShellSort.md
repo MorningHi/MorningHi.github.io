@@ -17,7 +17,7 @@ img: 'img/blog/shell.jpg'
 
   一个数组中任意间隔为 $h$ 的元素都是有序的，那这个数组就是**h有序数组**。如下图所示这个数组就是一个 $h$ 有序数组，其中 $h=4$。可以看到，虽然整个数组是乱序的，但任意相隔 $h=4$ 的元素都是有序的。
 
-  <center><img src="https://github.com/MorningHi/ImgRepository/raw/master/Hexoblog/sort/hsort.PNG" style=“zoom:60”></center>
+  <center><img src="https://github.com/MorningHi/ImgRepository/raw/master/Hexoblog/sort/hsort.PNG" style="zoom:15"\></center>
 
 - **希尔排序**
 
@@ -32,7 +32,6 @@ img: 'img/blog/shell.jpg'
 ## 演示
 
 <center><img src="https://github.com/MorningHi/ImgRepository/raw/master/Hexoblog/sort/ShellSort.gif"></center>
-
 &emsp;&emsp;图中，第一遍排序时 $h=5$，第二遍 $h=2$，第三遍 $h=1$，第三遍排序完成后相邻两个元素有序，因此整个数组有序。
 
 ## 代码实现
