@@ -10,7 +10,7 @@ date: 2019-09-12 19:20:12
 img:
 ---
 
-## 原理简介
+#### 原理简介
 
 &emsp;&emsp;模糊c均值聚类(Fuzzy C-Means)是引入了模糊理论的一种聚类算法，通过**隶属度**来表示样本属于某一类的概率，原因在于在很多情况下多个类别之间的界限并不是绝对的明确。显然，相比于k-means的硬聚类，模糊c均值聚类得到的聚类结果更灵活。
 
@@ -18,7 +18,7 @@ img:
 
 $$J_{m}=\sum_{i=1}^{N} \sum_{j=1}^{C} u_{i j}^{m}\left\|x_{i}-c_{j}\right\|^{2} \quad, \quad 1 \leq m<\infty \tag{1}$$
 
-其中，$m>1$ 为模糊系数(fuzzy coefficient)，$N$ 为样本数，$C$ 为聚类中心数，$c_j$ 表示第 $j$ 个聚类中心，和样本特征维数相同，$x_i$ 表示第 $i$ 个样本，$u_{ij}$ 表示样本 $x_i$ 对聚类中心 $c_j$ 的隶属度(通俗的说就是 $x_i$ 属于 $c_j$ 的概率)，显然满足
+其中，$m>1$ 为模糊系数(fuzzy coefficient)，$N$ 为样本数，$C$ 为聚类中心数，$$c_j$$ 表示第 $j$ 个聚类中心，和样本特征维数相同，$$x_i$$ 表示第 $i$ 个样本，$$u_{ij}$$ 表示样本 $$x_i$$ 对聚类中心 $$c_j$$ 的隶属度(通俗的说就是 $$x_i$$ 属于 $$c_j$$ 的概率)，显然满足
 
 $$\sum_{j=1}^{C} u_{i j}=1 \tag{2}$$
 
@@ -32,20 +32,20 @@ $$u_{i j}=\frac{1}{\sum_{k=1}^{C}\left(\frac{\left\|x_{i}-c_{j}\right\|}{\left\|
 
 $$c_{j}=\frac{\sum_{i=1}^{N} u_{i j}^{m} \cdot x_{i}}{\sum_{i=1}^{N} u_{i j}^{m}} \tag{5}$$
 
-迭代的终止条件为 $\max _{ij}\left\{\left|\mu_{ij}^{(t+1)}-u_{ij}^{(t)}\right|\right\}<\varepsilon$ ，其中 $t$ 是迭代步数，$\varepsilon$ 是一个很小的常数表示误差阈值。也就是说迭代地更新 $u_{ij}$ 和 $c_j$ 直到前后两次隶属度最大变化值不超过误差阈值。这个过程最终**收敛于 $J_m$ 的局部极小值点或鞍点**。
+迭代的终止条件为 $$\max _{ij}\left\{\left|u_{ij}^{(t+1)}-u_{ij}^{(t)}\right|\right\}<\varepsilon$$ ，其中 $t$ 是迭代步数，$$\varepsilon$$ 是一个很小的常数表示误差阈值。也就是说迭代地更新 $$u_{ij}$$ 和 $$c_j$$ 直到前后两次隶属度最大变化值不超过误差阈值。这个过程最终**收敛于 $J_m$ 的局部极小值点或鞍点**。
 
-## 算法步骤
+#### 算法步骤
 
 可以将模糊c均值聚类的过程归纳为以下几步：
 
 1. 初始化隶属度矩阵 $U^{(0)}$，若有 $N$个样本，指定类别数为 $C$，则隶属度矩阵应当是 $N*C$ 的矩阵；
 2. 根据式(5)更新聚类中心 $c_j, j=1,...,C$；
 3. 根据式(4)更新 $U^{(t)}, U^{(t+1)}$；
-4. 若满足终止条件 $\max _{ij}\left\{\left|\mu_{ij}^{(t+1)}-u_{ij}^{(t)}\right|\right\}<\varepsilon$ 则停止迭代，否则返回步骤2。
+4. 若满足终止条件 $$ \max _{ij}\left\{\left|u_{ij}^{(t+1)}-u_{ij}^{(t)}\right|\right\}<\varepsilon$$ 则停止迭代，否则返回步骤2。
 
-## 程序实现
+#### 程序实现
 
-下面代码以[Iris](http://archive.ics.uci.edu/ml/datasets/Iris)聚类数据集为例实现了fuzzy c-means。
+下面代码以[Iris](http://archive.ics.uci.edu/ml/datasets/Iris)数据集聚类为例实现了fuzzy c-means。
 
 ```python
 #!/usr/bin/python3
@@ -177,9 +177,7 @@ if __name__ == "__main__":
     main()
 ```
 
-## 参考资料
+#### 参考资料
 
 > [**A Tutorial on Clustering Algorithms**——Fuzzy C-Means Clustering](http://home.deib.polimi.it/matteucc/Clustering/tutorial_html/cmeans.html)
->
 > [Fuzzy C-Means（模糊C均值聚类）算法原理详解与python实现](https://blog.csdn.net/lyxleft/article/details/88964494)
-
